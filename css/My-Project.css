@@ -171,13 +171,8 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.My-Project .My-Project-list .btn-group .btn-edit {
+.My-Project .My-Project-list .btn-group .btn-edit .btn-post {
     background: #f7f7f7;
-}
-
-.My-Project .My-Project-list .btn-group .btn-post {
-    background: #333;
-    color: #fff;
 }
 
 .My-Project .My-Project-list .btn-group .btn-edit:hover,

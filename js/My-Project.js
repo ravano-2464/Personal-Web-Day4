@@ -19,15 +19,15 @@ function submitData(event) {
 
         if (imageValue) {
             const imageUrl = URL.createObjectURL(imageValue);
-
-            console.log(projectNameValue, startDateValue, endDateValue, descriptionValue, technologiesValue, imageUrl);
+            
+            console.log (projectNameValue, startDateValue, endDateValue, descriptionValue, technologiesValue, imageUrl);
 
             const MyProject = {
                 title: projectNameValue, 
                 content: descriptionValue,
                 technologies: technologiesValue,
                 image: imageUrl,
-                postAt: "09 November 2023",
+                postAt: "01 Januari 2024",
                 author: "Ravano Akbar Widodo"
             }
 

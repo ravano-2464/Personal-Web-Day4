@@ -19,8 +19,6 @@ function submitData(event) {
 
         if (imageValue) {
             const imageUrl = URL.createObjectURL(imageValue);
-            
-            console.log (projectNameValue, startDateValue, endDateValue, descriptionValue, technologiesValue, imageUrl);
 
             const MyProject = {
                 title: projectNameValue, 
@@ -32,6 +30,7 @@ function submitData(event) {
             }
 
             dataMyProject.push(MyProject);
+            console.log("dataMy-Project", dataMyProject)
             renderMyProject();
         }
     }
@@ -58,16 +57,39 @@ function renderMyProject() {
                 <div class="detail-My-Project-content">
                     ${dataMyProject[index].postAt} | ${dataMyProject[index].author}
                 </div>
-                <p>
+                <p style="text-align: center;">
                    ${dataMyProject[index].content}
                 </p>
+                <br>
                 <div class="technologies">
                     <label>Technologies:</label>
                     <ul>
                         ${dataMyProject[index].technologies.map((tech) => `<li>${tech}</li>`).join('')}
                     </ul>
+                <div class="card-icons">
+                     ${renderTechImages(dataMyProject[index])}
                 </div>
             </div>
-        </div>`;
+        </div>
+     </div>`;
+  }
+}
+
+function renderTechImages(project) {
+    let renderImages = "";
+
+    if (project.technologies.includes("Node Js")) {
+        renderImages += `<li><i class="fab fa-node-js"></i></li>`;
     }
+    if (project.technologies.includes("React Js")) {
+        renderImages += `<li><i class="fab fa-react"></i></li>`;
+    }
+    if (project.technologies.includes("Next Js")) {
+        renderImages += `<li><i class="fab fa-js"></i></li>`;
+    }
+    if (project.technologies.includes("TypeScript")) {
+        renderImages += `<li><i class="fab fa-js"></i></li>`;
+    }
+
+    return renderImages;
 }

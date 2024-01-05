@@ -44,6 +44,11 @@
     color: orangered;
 }
 
+.checkbox {
+    white-space: nowrap;
+    display: block;
+}
+
 .My-Project-list {
     display: flex;
     justify-content: center;

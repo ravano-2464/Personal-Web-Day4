@@ -66,30 +66,8 @@ function renderMyProject() {
                     <ul>
                         ${dataMyProject[index].technologies.map((tech) => `<li>${tech}</li>`).join('')}
                     </ul>
-                <div class="card-icons">
-                     ${renderTechImages(dataMyProject[index])}
-                </div>
             </div>
         </div>
      </div>`;
   }
-}
-
-function renderTechImages(project) {
-    let renderImages = "";
-
-    if (project.technologies.includes("Node Js")) {
-        renderImages += `<li><i class="fab fa-node-js"></i></li>`;
-    }
-    if (project.technologies.includes("React Js")) {
-        renderImages += `<li><i class="fab fa-react"></i></li>`;
-    }
-    if (project.technologies.includes("Next Js")) {
-        renderImages += `<li><i class="fab fa-js"></i></li>`;
-    }
-    if (project.technologies.includes("TypeScript")) {
-        renderImages += `<li><i class="fab fa-js"></i></li>`;
-    }
-
-    return renderImages;
 }

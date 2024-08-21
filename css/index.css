@@ -41,3 +41,10 @@
 .nav-link a:hover {
     color: orangered;
 }
+
+.sosmed-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 1rem;
+}
